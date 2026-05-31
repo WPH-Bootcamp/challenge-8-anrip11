@@ -46,72 +46,68 @@ export type ButtonVariant = 'primary' | 'secondary' | 'outline';
  * - Testimonial untuk testimonials section
  * - dll.
  */
+export interface NavItem {
+  label: string;
+  targetId: string;
+}
 
-/**
- * Example: Service/Product Item
- */
-// export interface ServiceItem {
-//   id: number;
-//   title: string;
-//   description: string;
-//   icon?: string;
-//   image?: string;
-// }
+export interface HeroData {
+  titleNormalBefore?: string;
+  titleHighlight: string;
+  titleNormalAfter?: string;
+  description: string;
+  imageDark: string;
+  imageLight: string;
+}
 
-/**
- * Example: Team Member
- */
-// export interface TeamMember {
-//   id: number;
-//   name: string;
-//   position: string;
-//   bio?: string;
-//   image: string;
-//   socialLinks?: {
-//     linkedin?: string;
-//     twitter?: string;
-//     github?: string;
-//   };
-// }
+export interface AboutItem {
+  number: string;
+  label: string;
+}
 
-/**
- * Example: Testimonial
- */
-// export interface Testimonial {
-//   id: number;
-//   name: string;
-//   position: string;
-//   company: string;
-//   message: string;
-//   avatar?: string;
-//   rating?: number;
-// }
+export type CompanyLogoItem = string;
 
-// ==========================================
-// Navigation Types
-// ==========================================
+export interface ProcessStep {
+  title: string;
+  subtitle: string;
+}
 
-/**
- * Navigation menu item
- */
-// export interface NavItem {
-//   label: string;
-//   href: string;
-//   external?: boolean;
-// }
+export interface ServiceItem {
+  icon: string;
+  title: string;
+  description: string;
+}
 
-// ==========================================
-// Form Types (if needed)
-// ==========================================
+export interface IndustryItem {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+}
 
-/**
- * Contact form data
- */
-// export interface ContactFormData {
-//   name: string;
-//   email: string;
-//   message: string;
-// }
+export interface ProjectsItem {
+  image: string;
+  category: string;
+  title: string;
+}
+
+export interface TestimonialItem {
+  id: number;
+  name: string;
+  role: string;
+  avatar: string;
+  quote: string;
+}
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface ContactItem {
+  id: string;
+  label: string;
+}
 
 // ==========================================
 // TODO: Add more types as needed!

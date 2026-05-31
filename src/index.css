@@ -4,8 +4,11 @@
  * Tailwind CSS v4 - Using new @import syntax
  * Docs: https://tailwindcss.com/docs/installation/using-vite
  */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
 
-@import "tailwindcss";
+/* Toggle dark and light */
+@variant dark (&:where(.dark, .dark *));
 
 /* Tell Tailwind where to scan for classes */
 @source "./**/*.{js,jsx,ts,tsx}";
@@ -17,10 +20,47 @@
  * Add your custom global styles here if needed
  * Prefer using Tailwind utilities in components
  */
+@theme {
+  /* CONFIGURATION: FONT FAMILY */
+  --font-body: 'Quicksand', sans-serif;
+
+  /* CONFIGURATION: PRIMARY COLORS */
+  --color-primary-100: #ffe0d8;
+  --color-primary-200: #ff623e;
+  --color-primary-300: #cc4e32;
+  --color-primary-400: #80311f;
+
+  /* CONFIGURATION: NEUTRAL COLORS */
+  --color-neutral-25: #fdfdfd;
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e9eaeb;
+  --color-neutral-300: #d5d7da;
+  --color-neutral-400: #a4a7ae;
+  --color-neutral-500: #717680;
+  --color-neutral-600: #535862;
+  --color-neutral-700: #414651;
+  --color-neutral-800: #252b37;
+  --color-neutral-900: #181d27;
+  --color-neutral-950: #0a0d12;
+}
 
 /* Smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-marquee {
+  animation: marquee 25s linear infinite;
 }
 
 /* Optional: Custom scrollbar styles */
@@ -32,6 +72,7 @@ html {
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
 
 ::-webkit-scrollbar-thumb {
   background: #888;
