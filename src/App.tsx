@@ -9,7 +9,6 @@
  * Current: Placeholder untuk testing Tailwind setup
  */
 
-import React from 'react';
 import { Home } from './pages/Home';
 
 function App() {
